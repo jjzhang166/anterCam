@@ -4,12 +4,12 @@
  *  Author: Alberto A. Heredia (bertoso)
  *
  **********************************************/
-
+#pragma once
 
 #include <strsafe.h>
 #include "ICaptureParam.h"
 #include "ICaptureReport.h"
-
+#include "ScreenPropertyPage.h"
 // screen capture types
 enum
 {
@@ -20,12 +20,29 @@ enum
 	CAPTURE_ALLSCREENS  // in case of dual monitor... not fully supported
 };
 
+  
 #define FILTER_NAME    L"CamStudio Screen Capture"
 #define WINDOW_CLASS   L"FlashingWindow"
 
 
-// {9C4E4AF6-8423-4D6C-AC34-5F9045C5791A}
-DEFINE_GUID(CLSID_ScreenStreamFormatProp,0x9c4e4af6, 0x8423, 0x4d6c, 0xac, 0x34, 0x5f, 0x90, 0x45, 0xc5, 0x79, 0x1a);
+ typedef struct MediaDescriptor{ 
+	DWORD biCompression;
+	DWORD biBitCount; 
+	unsigned int width;       //  ¿í¶È
+	unsigned int height;      //  ¸ß¶È 
+}MediaDescriptor;
+
+const MediaDescriptor  video_desc[]= { 
+	{BI_RGB,32,0,0}, 
+	{BI_RGB,32,1600,900},
+	{BI_RGB,32,1280,960},
+   // {BI_RGB,32,1280,720},
+	{BI_RGB,32,1024,768},
+	{BI_RGB,32,800,600},
+	{BI_RGB,32,720,576},
+	{BI_RGB,32,640,480},
+	//{BI_RGB,24,640,360},  
+};
 
 class CCamStudioPin;
 
@@ -282,7 +299,7 @@ private:
 //* CCamStudioFilter
 //*********************************************
 class CCamStudioFilter : public CSource // public IAMFilterMiscFlags // CSource is CBaseFilter is IBaseFilter is IMediaFilter is IPersist which is IUnknown
-,public ISpecifyPropertyPages
+//,public ISpecifyPropertyPages
 {
 
 private:
@@ -309,14 +326,17 @@ public:
 	//////////////////////////////////////////////////////////////////////////
 	//  IUnknown
 	//////////////////////////////////////////////////////////////////////////
-	//DECLARE_IUNKNOWN;
+	// DECLARE_IUNKNOWN;
 	static CUnknown * WINAPI CreateInstance(LPUNKNOWN lpunk, HRESULT *phr);
 	//STDMETHODIMP NonDelegatingQueryInterface(REFIID riid, void ** ppv);
+	
+	/**/
 	STDMETHODIMP QueryInterface(REFIID riid, void **ppv);
 
 	// ?? compiler error that these be required here? huh?
 	ULONG STDMETHODCALLTYPE AddRef() { return CBaseFilter::AddRef(); };
 	ULONG STDMETHODCALLTYPE Release() { return CBaseFilter::Release(); };
+	
 	/*
 	 * Name : GetGraph
 	 * Desc : Returns the pointer of the IFilterGraph where CamStudio Screen Capture belongs
@@ -338,9 +358,11 @@ public:
 	//STDMETHODIMP Run(REFERENCE_TIME tStart);
 
 	HRESULT GetFilterState()const;
-	virtual HRESULT STDMETHODCALLTYPE GetPages(/* [out] */ __RPC__out CAUUID *pPages);
+	//virtual HRESULT STDMETHODCALLTYPE GetPages(/* [out] */ __RPC__out CAUUID *pPages);
+
 };
 class CCamStudioPin : public CSourceStream, /*public CMediaControl,*/ public IAMStreamConfig, public IKsPropertySet, /*public IMediaControl,*/ ICaptureParam, ICaptureReport //CSourceStream is ... CBasePin
+,IScreenCaptureSize,public ISpecifyPropertyPages
 {
 
 protected:
@@ -362,13 +384,16 @@ protected:
 	HWND m_hWndToTrack;
 
 	int m_iCaptureMode;
+
+	RECT m_rDstScreen;
 public:
 
 	//////////////////////////////////////////////////////////////////////////
 	//  IUnknown
 	//////////////////////////////////////////////////////////////////////////
 	//DECLARE_IUNKNOWN;
-	//STDMETHODIMP NonDelegatingQueryInterface(REFIID riid, void ** ppv);
+
+
 	STDMETHODIMP QueryInterface(REFIID riid, void **ppv); 
 	STDMETHODIMP_(ULONG) AddRef() { return GetOwner()->AddRef(); } 
 	STDMETHODIMP_(ULONG) Release() { return GetOwner()->Release(); }
@@ -408,6 +433,25 @@ public:
 	{
 		return E_FAIL;
 	}
+
+
+	////////////////ISpecifyPropertyPages
+	virtual HRESULT STDMETHODCALLTYPE GetPages(/* [out] */ __RPC__out CAUUID *pPages);
+	STDMETHODIMP NonDelegatingQueryInterface(REFIID riid, void ** ppv);
+
+	////////////////IScreenCaptureSize
+	virtual STDMETHODIMP  SetDstWidth(UINT iDstWidth);
+    virtual STDMETHODIMP  SetDstHeight(UINT iDstHeight);
+	virtual STDMETHODIMP_(UINT)  GetDstWidth (void);
+	virtual STDMETHODIMP_(UINT)  GetDstHeight (void);
+	virtual STDMETHODIMP_(UINT)  GetSrcWidth (void);
+	virtual STDMETHODIMP_(UINT)  GetSrcHeight (void);
+	virtual STDMETHODIMP_(bool)  IsIncludeDefaultSize(void); 
+    virtual STDMETHODIMP  SetChange(bool bChange);
+
+	virtual	STDMETHODIMP  SetFrameRate (UINT iFrameRate) ;
+	virtual  STDMETHODIMP_(UINT) GetFrameRate(void); 
+
 ////////////////////////////////////////////////////////////////////
 // ICaptureParam - interface to Recorder app
 ////////////////////////////////////////////////////////////////////
@@ -494,6 +538,8 @@ public:
 	 */
 	//virtual STDMETHODIMP SetParentWindow(HWND hWnd);
 
+
+	virtual STDMETHODIMP  SetWidth(int iWidth);
 ///////////////////////////////////////////////////////////////////////////
 // ICaptureReport - interface to Recorder app
 ///////////////////////////////////////////////////////////////////////////
@@ -547,7 +593,7 @@ public:
 	HRESULT STDMETHODCALLTYPE Set(REFGUID guidPropSet, DWORD dwID, void *pInstanceData, DWORD cbInstanceData, void *pPropData, DWORD cbPropData);
 	HRESULT STDMETHODCALLTYPE Get(REFGUID guidPropSet, DWORD dwPropID, void *pInstanceData,DWORD cbInstanceData, void *pPropData, DWORD cbPropData, DWORD *pcbReturned);
 	HRESULT STDMETHODCALLTYPE QuerySupported(REFGUID guidPropSet, DWORD dwPropID, DWORD *pTypeSupport);
-
+	 
 	int m_iFrameNumber;
 	HWND m_hParent;
 protected:
@@ -685,6 +731,8 @@ private:
 
 	BOOL CreateFlashing();
 
+
+	void InitIcon();
 	// Instance variables
 
 	//CFlashingWnd m_FlashingWnd;
@@ -703,6 +751,8 @@ private:
 	int m_iMaxPan;
 	UINT m_nCaptureWidth;
 	UINT m_nCaptureHeight;
+	UINT m_nSrcWidth;
+	UINT m_nSrcHeight;
 	POINT m_ptZoomAt;
 	//int m_iCaptureMode;
 	int m_iZoom;
@@ -722,5 +772,14 @@ private:
 	POINT		m_ptStart;
 	HWND		m_hFlashingWnd;
 	HRGN		m_rgnWindow;
+
+	float  m_fScaleX;
+	float  m_fScaleY;
+    DWORD  m_xHotspot;
+	DWORD  m_yHotspot; 
+
+	bool m_bIsChange;
+    
+	bool m_bIncludeDefaultSize;
 };
 

@@ -1,0 +1,425 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses
+END
+schedule.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/schedule.h
+END
+dllsetup.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/dllsetup.h
+END
+amextra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/amextra.cpp
+END
+transfrm.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/transfrm.h
+END
+mtype.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/mtype.h
+END
+baseclasses.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/baseclasses.vcproj
+END
+wxdebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxdebug.h
+END
+checkbmi.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/checkbmi.h
+END
+vtrans.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/vtrans.cpp
+END
+videoctl.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/videoctl.h
+END
+streams.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/streams.h
+END
+ddmm.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/ddmm.h
+END
+outputq.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/outputq.h
+END
+refclock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/refclock.cpp
+END
+pullpin.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/pullpin.h
+END
+wxlist.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxlist.cpp
+END
+perflog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/perflog.cpp
+END
+source.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/source.cpp
+END
+wxutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxutil.h
+END
+wxdebug.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxdebug.cpp
+END
+perfstruct.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/perfstruct.h
+END
+amfilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/amfilter.h
+END
+videoctl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/videoctl.cpp
+END
+combase.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/combase.h
+END
+ctlutil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/ctlutil.cpp
+END
+outputq.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/outputq.cpp
+END
+ddmm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/ddmm.cpp
+END
+winctrl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/winctrl.cpp
+END
+pullpin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/pullpin.cpp
+END
+renbase.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/renbase.h
+END
+amvideo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/amvideo.cpp
+END
+sysclock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/sysclock.cpp
+END
+refclock.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/refclock.h
+END
+wxlist.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxlist.h
+END
+reftime.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/reftime.h
+END
+winutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/winutil.h
+END
+baseclasses.sln
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/baseclasses.sln
+END
+amfilter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/amfilter.cpp
+END
+perflog.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/perflog.h
+END
+arithutil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/arithutil.cpp
+END
+source.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/source.h
+END
+measure.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/measure.h
+END
+combase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/combase.cpp
+END
+dxmperf.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/dxmperf.h
+END
+renbase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/renbase.cpp
+END
+transip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/transip.cpp
+END
+pstream.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/pstream.h
+END
+ctlutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/ctlutil.h
+END
+fourcc.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/fourcc.h
+END
+winctrl.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/winctrl.h
+END
+cprop.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/cprop.h
+END
+strmctl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/strmctl.cpp
+END
+winutil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/winutil.cpp
+END
+schedule.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/schedule.cpp
+END
+transfrm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/transfrm.cpp
+END
+dllsetup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/dllsetup.cpp
+END
+dllentry.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/dllentry.cpp
+END
+mtype.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/mtype.cpp
+END
+sysclock.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/sysclock.h
+END
+seekpt.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/seekpt.h
+END
+amextra.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/amextra.h
+END
+cache.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/cache.h
+END
+pstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/pstream.cpp
+END
+msgthrd.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/msgthrd.h
+END
+vtrans.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/vtrans.h
+END
+cprop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/cprop.cpp
+END
+transip.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/transip.h
+END
+seekpt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/seekpt.cpp
+END
+wxutil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/wxutil.cpp
+END
+strmctl.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/3145/deps/third_party/winsdk_samples_v71/Samples/multimedia/directshow/baseclasses/strmctl.h
+END

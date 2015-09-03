@@ -9,7 +9,8 @@
 #include "Guids.h"
 #include "CamStudioFilterHelper.h"
 #include "ICaptureParam.h"
-
+#include"IScreenCaptureSize.h"
+  
 CCamStudioFilter::CCamStudioFilter(IUnknown *pUnk, HRESULT *phr)
 	: CSource(NAME("Camstudio Screen Capture"), pUnk, CLSID_PushSourceDesktop)
 	, m_pPin(NULL)
@@ -48,7 +49,7 @@ CUnknown * WINAPI CCamStudioFilter::CreateInstance(IUnknown *pUnk, HRESULT *phr)
 	}
 	return pNewFilter;
 }
-
+/**/
 STDMETHODIMP CCamStudioFilter::QueryInterface(REFIID riid, void **ppv)
 {
 	if(riid == _uuidof(IAMStreamConfig))
@@ -59,8 +60,6 @@ STDMETHODIMP CCamStudioFilter::QueryInterface(REFIID riid, void **ppv)
 		return m_pPin->QueryInterface(riid, ppv);
 	else if(riid == IID_ICaptureReport)
 		return m_pPin->QueryInterface(riid, ppv);
-	else if(riid ==IID_ISpecifyPropertyPages)
-		return GetInterface(static_cast<ISpecifyPropertyPages*>(this),ppv);
 	else
 		return CSource::QueryInterface(riid, ppv);
 }
@@ -87,15 +86,38 @@ STDMETHODIMP CCamStudioFilter::Stop() {
 STDMETHODIMP CCamStudioFilter::Pause() {
 
 	CAutoLock filterLock(m_pLock);
+
+	/*   dongmingyi
+	
 	if(m_State == State_Running)
-		m_pPin->Pause();
+		m_pPin->Pause();*/ 
+
+
 	//Default implementation
 	HRESULT hr = CSource::Pause();
 	return hr;
 }
+ 
+/*
+STDMETHODIMP CCamStudioFilter::NonDelegatingQueryInterface(REFIID riid, 
+
+    void **ppv)
+
+{
+
+    if (riid == IID_ISpecifyPropertyPages)
+    {
+        return GetInterface((ISpecifyPropertyPages *)this, ppv);
+    }
+	else if(riid == IID_IScreenCaptureSize)
+		return GetInterface((IScreenCaptureSize*) this, ppv);
+	 
+    return CSource::NonDelegatingQueryInterface(riid, ppv);
+
+}
 
 
-HRESULT CCamStudioFilter::GetPages(/* [out] */ __RPC__out CAUUID *pPages)
+HRESULT CCamStudioFilter::GetPages(  __RPC__out CAUUID *pPages)
 {
 	if (pPages == NULL) return E_POINTER;
 	pPages->cElems = 1;
@@ -106,4 +128,4 @@ HRESULT CCamStudioFilter::GetPages(/* [out] */ __RPC__out CAUUID *pPages)
 	}
 	pPages->pElems[0] = CLSID_ScreenStreamFormatProp;
 	return S_OK;
-}
+}*/

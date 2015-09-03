@@ -1,21 +1,34 @@
 #pragma once
-
-class CScreenProp : public CBasePropertyPage
+#include "IScreenCaptureSize.h"
+#include "CamStudioScreenCapture.h"
+class CScreenCapProp : public CBasePropertyPage
 {
 private:
-    CScreenProp(IUnknown *pUnknown);
-	virtual ~CScreenProp() { };
-
+    CScreenCapProp(IUnknown *pUnknown, HRESULT *phr);
+	virtual ~CScreenCapProp() { };
+ 
 public:
-	
-	virtual HRESULT OnConnect(IUnknown *pUnknown) { return NOERROR; };
-	virtual HRESULT OnDisconnect() { return NOERROR; };
-	virtual HRESULT OnActivate() { return NOERROR; };
+	 static CUnknown * WINAPI CreateInstance(LPUNKNOWN lpunk, HRESULT *phr);
+    DECLARE_IUNKNOWN;
+	virtual HRESULT OnConnect(IUnknown *pUnknown);
+	virtual HRESULT OnDisconnect();
+	virtual HRESULT OnActivate();
 	virtual HRESULT OnDeactivate() { return NOERROR; };
-	virtual HRESULT OnApplyChanges() { return NOERROR; };
+	virtual HRESULT OnApplyChanges();
 	virtual INT_PTR OnReceiveMessage(HWND hwnd,UINT uMsg,WPARAM wParam,LPARAM lParam);
+
+	void SetDirty();
 private:
-	//ISaturation *m_pGray; // Pointer to the filter's custom interface.
-	long m_lVal ;// Store the old value, so we can revert.
-	long m_lNewVal; // New value.
+	IScreenCaptureSize *m_pCapSize; // Pointer to the filter's custom interface.
+	int m_lVal ;// Store the old value, so we can revert.
+	int m_lNewVal; // New value.
+
+	  //HWND      m_hSize;  
+
+     HWND                m_hwnd ;                    //  property page HWND
+
+  	UINT m_nSrcWidth;
+	UINT m_nSrcHeight;
+
+	UINT m_nFrameRate;
 };
