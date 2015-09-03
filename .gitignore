@@ -1,1 +1,6 @@
+Baseclasses/Debug/
+Baseclasses/Release/
 sources/Release/
+*.suo
+*.opensdf
+*.sdf
